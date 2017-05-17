@@ -1,0 +1,58 @@
+.footer {
+	margin-bottom: 1em;
+
+	@include mq(large) {
+		height: 304px;
+	}
+	@include mq(x-large) {
+
+		max-width: $breakpoint-x-lg;
+		margin: auto;
+	}
+	.row {
+		height: 100%;
+		margin-top: 2em;
+		align-items: middle;
+	}
+	@include e(nav) {
+		li {
+			width: 49%;
+			display: inline-block;
+			text-align: center;
+			padding: 1em 0;
+			a {
+				color: white;
+				text-decoration: none;
+				font-family: $head-font;
+				font-size: 2em;
+			}
+		}
+	}
+	.social {
+		padding: 1em;
+		@include mq(large) {
+			height: 304px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+		}
+
+		i {
+			font-size: 2.5em;
+			color: white;
+		}
+	}
+}
+
+
+.twitter-feed {
+	// padding: 0 10%;
+	text-align: center;
+	@include mq (large) {
+		padding: 0;
+	}
+	iframe {
+		@extend .centered;
+	}
+}

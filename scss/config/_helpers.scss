@@ -1,0 +1,79 @@
+// ============================================================================
+// HELPERS
+// ============================================================================
+
+// clearfix
+
+%clearfix {
+	&:before {
+		content: "";
+    display: table;	
+	}
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// center elements
+
+.centered {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.no-bullets {
+	list-style: none;
+}
+
+.padded-box {
+	padding: 1em;
+	@include mq(medium) {
+		padding: 1em 2em;
+	}
+	@include mq(x-large) {
+		padding: 1em 3em;
+	}
+	@include m(thin) {
+		padding: 1.5em;
+	}
+}
+
+.btn {
+	background-color: $lighter-base-color;
+	border-radius: .25em;
+	padding: 8px 32px;
+	text-align: center;
+	font-family: $head-font;
+	font-size: 24px;
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+	&:hover {
+		background-color: $base-color;
+	}
+	@include m(wide) {
+		@extend .centered;
+		padding: 8px 0;
+		width: 80%;
+	}
+	@include m(cta) {
+		@extend .centered;
+		color: $base-color;
+		background-color: white;
+		&:hover {
+			background-color: $lighter-base-color;
+			color: white;
+		}
+		&-blue {
+			@extend .centered;
+			background-color: $lighter-base-color;
+			color: white;
+		}
+	}
+}
+
+
+

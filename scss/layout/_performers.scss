@@ -1,0 +1,63 @@
+.performer {
+	@extend %clearfix;
+	// position: relative;
+	// @include e(bio) {
+	// 	@include mq(x-large) {
+	// 		width: 70%;
+	// 		float: right;
+	// 	}
+	// } 
+
+	@include e(img) {
+		width: 50%;
+		height: auto;
+		margin: auto;
+		margin-bottom: 1em;
+		@include mq(medium) {
+			width: 30%;
+		}
+		@include mq(large) {
+			margin-left: 0;
+			img {
+				width: auto;
+				height: 100%;
+				margin: auto;
+				display: block;
+			}
+		}
+	}
+
+	&:nth-of-type(even) {
+		@include mq(large) {
+			.performer__img {
+				float: right;
+				margin-left: 2em;
+			}
+		}
+	}			
+	&:nth-of-type(odd) {
+		@include mq(large) {
+			.performer__img {
+				float: left;
+				margin-right: 2em;
+			}
+		}
+	}
+	
+	.social {
+		width: 80%;
+		margin-left: 10%;
+		@extend .centered;
+		@extend %clearfix;
+		@include mq(medium) {
+			width: 60%;
+			margin-left: 20%;
+		}
+		@include mq(large) {
+			width: 40%;
+			margin-left: 30%;
+		}
+	}
+
+
+}
